@@ -1,0 +1,6 @@
+{
+  "name": "TransitFleets - Outstation Cab Booking",
+  "description": "Book outstation cabs for one-way, round-trip and multi-city travel across India. Choose from multiple vehicle options and get a quotation from TransitFleets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

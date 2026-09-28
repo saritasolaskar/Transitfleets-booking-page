@@ -1,0 +1,226 @@
+/* 
+ * TransitFleets - Outstation Cab Booking
+ * Custom styles complementing Bootstrap 5.3
+ */
+
+:root {
+  --tf-navy-dark: #0a1c33;
+  --tf-navy-mid: #102a4d;
+  --tf-blue-primary: #0284c7;
+  --tf-blue-hover: #0369a1;
+  --tf-emerald: #059669;
+  --tf-slate-50: #f8fafc;
+  --tf-slate-100: #f1f5f9;
+  --tf-slate-200: #e2e8f0;
+  --tf-slate-700: #334155;
+  --tf-slate-800: #1e293b;
+  --tf-slate-900: #0f172a;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--tf-slate-800);
+  background-color: var(--tf-slate-50);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #071526 0%, #0d2342 50%, #091e38 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(2, 132, 199, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+/* Card & Surface Polish */
+.card {
+  border-radius: 1rem;
+  border-color: rgba(226, 232, 240, 0.9);
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  border-color: #cbd5e1;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--tf-blue-primary);
+  box-shadow: 0 0 0 0.2rem rgba(2, 132, 199, 0.15);
+}
+
+.form-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--tf-slate-700);
+  margin-bottom: 0.35rem;
+}
+
+/* Trip Type Segmented Buttons */
+.trip-type-btn-group .btn {
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.trip-type-btn-group .btn-check:checked + .btn {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+/* Primary Color Utilities */
+.btn-primary {
+  background-color: var(--tf-blue-primary);
+  border-color: var(--tf-blue-primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--tf-blue-hover);
+  border-color: var(--tf-blue-hover);
+}
+
+.btn-whatsapp {
+  background-color: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.btn-whatsapp:hover {
+  background-color: #059669;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+.text-primary-tf {
+  color: var(--tf-blue-primary) !important;
+}
+
+.bg-primary-tf {
+  background-color: var(--tf-blue-primary) !important;
+}
+
+/* Section Headings */
+.section-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--tf-blue-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--tf-slate-900);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Vehicle & Route Cards */
+.vehicle-card, .route-card, .highlight-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vehicle-card:hover, .route-card:hover, .highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: #bae6fd !important;
+}
+
+.vehicle-img-wrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.vehicle-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-img-wrapper img {
+  transform: scale(1.04);
+}
+
+/* Accordion Customization */
+.accordion-item {
+  border-radius: 0.75rem !important;
+  border: 1px solid var(--tf-slate-200);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.accordion-button {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tf-slate-900);
+  background-color: #f8fafc;
+  padding: 1.1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--tf-blue-primary);
+  background-color: #f0f9ff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: var(--tf-blue-primary);
+  box-shadow: none;
+}
+
+/* Floating Mobile Action Bar */
+.mobile-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--tf-slate-200);
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-action-bar .btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.6rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* Utility to offset mobile bottom bar */
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 70px;
+  }
+}
